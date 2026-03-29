@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta
+      name="description"
+      content="{{ page.description | default: site.description | escape }}"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/services/' | relative_url }}">Services</a>
+        <a href="{{ '/lead-magnet/' | relative_url }}">Free Checklist</a>
+        <a href="{{ '/contact/' | relative_url }}">Book</a>
+      </nav>
+    </header>
+
+    <main class="{% if page.main_class %}{{ page.main_class }}{% endif %}">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ site.title }}</p>
+      <p>{{ page.footer_note | default: "Replace placeholders with your real name, email, and booking link before publishing." }}</p>
+    </footer>
+  </body>
+</html>

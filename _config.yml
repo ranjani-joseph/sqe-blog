@@ -1,0 +1,22 @@
+title: SQE Career Lab
+description: Practical career coaching and content for QA and SDET job seekers.
+url: "https://ranjani-joseph.github.io"
+baseurl: "/sqe-blog"
+markdown: kramdown
+theme: null
+permalink: /blog/:title/
+plugins: []
+exclude:
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default

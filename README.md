@@ -1,10 +1,13 @@
-# SQE Blog Revenue Kit
+# SQE Career Lab
 
-This starter project turns the revenue plan into a simple static site and a set of operating assets for a software quality engineering blog aimed at QA/SDET job seekers.
+This repository is now a Jekyll site for a software quality engineering blog aimed at QA/SDET job seekers. It includes public pages, starter blog posts, and the business assets that support the coaching funnel.
 
 ## Repository layout
 
-- `site/`: public-facing website pages that GitHub Pages will publish
+- `_config.yml`: Jekyll site configuration
+- `_layouts/`: shared Jekyll layouts
+- `_posts/`: starter blog content
+- `assets/css/`: site styling
 - `assets/lead-magnet/`: downloadable lead magnet copy
 - `assets/email/`: welcome and nurture email sequence
 - `assets/content/`: blog content calendar and post briefs
@@ -12,20 +15,40 @@ This starter project turns the revenue plan into a simple static site and a set 
 - `assets/offers/`: pricing and offer definitions
 - `.github/workflows/deploy-pages.yml`: GitHub Pages deployment workflow
 
+## Run locally with Docker
+
+This project is configured to run with the official `jekyll/jekyll:4` Docker image.
+
+### Option 1: Docker Compose
+
+```bash
+docker compose up
+```
+
+Then open `http://localhost:4000/sqe-blog/`.
+
+### Option 2: Direct Docker command
+
+```bash
+docker run --rm \
+  -p 4000:4000 \
+  -p 35729:35729 \
+  -v "$PWD:/srv/jekyll" \
+  jekyll/jekyll:4 \
+  jekyll serve --livereload --host 0.0.0.0 --port 4000 --force_polling
+```
+
 ## GitHub Pages deployment
 
-This repo is set up to deploy the `site/` folder with GitHub Actions.
+The GitHub Actions workflow builds the Jekyll site and deploys the generated `_site` output to GitHub Pages.
 
-1. Create a new GitHub repository and push this project to the `main` branch.
-2. In GitHub, open `Settings` -> `Pages`.
-3. Under `Build and deployment`, choose `GitHub Actions`.
-4. Push future updates to `main` and GitHub will redeploy automatically.
-
-The published homepage will come from `site/index.html`.
+1. Open the repository `Settings` -> `Pages`
+2. Set `Build and deployment` to `GitHub Actions`
+3. Push to `main` and GitHub will rebuild the site automatically
 
 ## Suggested next steps
 
-1. Update contact details, booking link, and email signup destination in the HTML files.
-2. Turn the lead magnet markdown into a PDF and link it from the signup flow.
-3. Write and publish the first two posts from the content calendar.
-4. Start outreach using the included templates and collect the first beta testimonials.
+1. Update contact details, booking link, and email signup destination in the Jekyll pages.
+2. Replace placeholder testimonials with real beta client feedback.
+3. Add the remaining posts from the content calendar into `_posts/`.
+4. Turn the lead magnet markdown into a PDF and attach it to your email platform.

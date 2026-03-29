@@ -1,0 +1,113 @@
+---
+title: QA & SDET Career Coaching
+description: Practical career coaching for QA and SDET job seekers. Get resume feedback, portfolio reviews, and mock interviews that help you land better opportunities.
+---
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Software Quality Engineering Career Coaching</p>
+    <h1>Help for QA and SDET candidates who want stronger resumes, sharper interviews, and better offers.</h1>
+    <p class="hero-text">
+      Practical guidance for manual QA, automation QA, and SDET job seekers. Use targeted coaching to improve your resume, build a better testing portfolio, and walk into interviews with real examples that stand out.
+    </p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ '/contact/' | relative_url }}">Book a Review Session</a>
+      <a class="button button-secondary" href="{{ '/lead-magnet/' | relative_url }}">Get the Free QA/SDET Checklist</a>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <h2>Fastest path to first wins</h2>
+    <ul>
+      <li>Resume and LinkedIn review for QA/SDET roles</li>
+      <li>Mock interviews for manual, automation, and SDET tracks</li>
+      <li>Portfolio and project feedback for test automation work</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="section section-grid">
+  <article class="panel">
+    <p class="panel-label">Who this helps</p>
+    <h2>Job seekers moving into QA, test automation, or SDET roles</h2>
+    <p>
+      This site is designed for students, bootcamp grads, early-career testers, and engineers transitioning into quality-focused roles who need clear next steps and outside feedback.
+    </p>
+  </article>
+  <article class="panel">
+    <p class="panel-label">What you get</p>
+    <h2>Specific, actionable feedback</h2>
+    <p>
+      Every offer is built around concrete improvements: better project framing, stronger interview stories, cleaner testing examples, and a more credible application package.
+    </p>
+  </article>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">Core Offers</p>
+    <h2>Start with one focused service, then add support where needed.</h2>
+  </div>
+  <div class="card-grid">
+    <article class="card">
+      <h3>QA/SDET Resume Review</h3>
+      <p class="price">$79</p>
+      <p>Primary offer for candidates who need help positioning experience, projects, and quality engineering skills.</p>
+    </article>
+    <article class="card">
+      <h3>Mock Interview Session</h3>
+      <p class="price">$99</p>
+      <p>Practice behavioral and technical questions with feedback on test design, bug reporting, automation, and communication.</p>
+    </article>
+    <article class="card">
+      <h3>Portfolio Review</h3>
+      <p class="price">$89</p>
+      <p>Audit your GitHub projects, frameworks, README files, and test artifacts so recruiters can quickly understand your strengths.</p>
+    </article>
+  </div>
+  <p class="bundle-note">Bundle option: 3-session interview sprint for $239.</p>
+</section>
+
+<section class="section accent-section">
+  <div class="section-heading">
+    <p class="eyebrow">Free Resource</p>
+    <h2>Download the QA/SDET Resume and Portfolio Checklist</h2>
+  </div>
+  <p>
+    Use this checklist to evaluate your resume, GitHub portfolio, and project examples before you apply. It is designed to help you spot the gaps recruiters usually notice first.
+  </p>
+  <a class="button button-primary" href="{{ '/lead-magnet/' | relative_url }}">See the Checklist</a>
+</section>
+
+<section class="section">
+  <div class="section-heading section-heading-inline">
+    <div>
+      <p class="eyebrow">Latest Posts</p>
+      <h2>Jekyll-ready blog content that leads into paid help</h2>
+    </div>
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
+  </div>
+  <div class="card-grid post-grid">
+    {% for post in site.posts limit:3 %}
+    <article class="card post-card">
+      <p class="panel-label">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+      <a class="text-link" href="{{ post.url | relative_url }}">Read the article</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section testimonials">
+  <div class="section-heading">
+    <p class="eyebrow">Social Proof</p>
+    <h2>Use this area for beta testimonials as soon as you have them.</h2>
+  </div>
+  <div class="card-grid">
+    <article class="card quote-card">
+      <p>"Placeholder for an early client result focused on resume clarity or interview confidence."</p>
+    </article>
+    <article class="card quote-card">
+      <p>"Placeholder for a candidate who improved their project presentation or received more callbacks."</p>
+    </article>
+  </div>
+</section>

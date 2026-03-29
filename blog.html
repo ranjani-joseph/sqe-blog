@@ -1,0 +1,25 @@
+---
+title: Blog
+description: Practical SQE articles for QA and SDET job seekers.
+permalink: /blog/
+---
+<section class="section-heading">
+  <p class="eyebrow">Blog</p>
+  <h1>Practical QA and SDET career content</h1>
+  <p>
+    These articles are designed to attract high-intent readers and move them toward resume reviews, mock interviews, and portfolio feedback.
+  </p>
+</section>
+
+<section class="section">
+  <div class="post-list">
+    {% for post in site.posts %}
+    <article class="card post-card post-card-wide">
+      <p class="panel-label">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+      <a class="text-link" href="{{ post.url | relative_url }}">Read the article</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
