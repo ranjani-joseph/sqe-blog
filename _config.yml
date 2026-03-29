@@ -1,7 +1,7 @@
 title: SQE Career Lab
 description: Practical career coaching and content for QA and SDET job seekers.
-url: "https://ranjani-joseph.github.io"
-baseurl: "/sqe-blog"
+url: "http://sqe.talks.com"
+baseurl: ""
 markdown: kramdown
 theme: null
 permalink: /blog/:title/
